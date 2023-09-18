@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="frame" id="frame"  >
+        <div class="nav-bar" id="nav-bar">
+                   <img src="./assets/images/Aman.png" alt="aman.png"  class="image" id="image">
+                   <div class="item" id="a"> <a href="#about" class="item" id="about-box"  onclick="highLight('about-box')">About</a></div>
+                   <div class="item" id="b"> <a href="#education" class="item " id="education-box" onclick="highLight('education-box')">Education</a></div>
+                   <div class="item" id="c"> <a href="#resume" class="item" id="resume-box" onclick="highLight('resume-box')">Resume</a></div>
+                   <div class="item" id="d"> <a href="#experience" class="item" id="experience-box" onclick="highLight('experience-box')">Experience</a></div>
+                   <div class="item" id="e"> <a href="#interests" class="item" id="interests-box"onclick="highLight('interests-box')" >Insterests</a></div>
+                   <div class="item" id="f"> <a href="#contacts" class="item" id="contacts-box" onclick="highLight('contacts-box')">Contacts</a></div>
+                   <button class="collapse-btn" id="link-collapse-btn" onclick="showLinks()" > 
+                        <div class="rod"style="height:5px; width:37px; margin:6px; border-radius:2px; background:black;"></div>
+                        <div class="rod"style="height:5px; width:37px; margin:6px; border-radius:2px; background:black;"></div>
+                        <div class="rod"style="height:5px; width:37px; margin:6px; border-radius:2px; background:black;"></div>
+                   </button>
+            <script src="./scripts/portfolio.js"></script>
+        </div>
+        <hr>
+        <section class="about-box detail-box" id="about">
+            <div  class="name  heading" id="name"> Aman <span class="salmon"> Raw</span></div>
+            
+            <div class="para description sectional-item about-para" id="about-para">
+                I am Graduate Engineer Trainee at Jio Platforms Limited. Working as software Developer under GET role. I always consider myself a student as I am keen or learning new things. 
+                I have been a scholar and Merit holder Since my school time. It started from a government Primary school from there this journey covers the path of Jawahar Navodaya Vidayalaya to Dakshana 
+                to super-100 to IITK.I like to explore new algorithms, understading and analysing them. I like solving real world problems using algorithms which is what
+                gives me motivation for software Development. 
+            </div>
+        </section>
+        <hr>
+        <section class="education-box detail-box" id="education">
+            <div  class="education  heading" id="education-heading">Education</div>
+            <div class="sectional-item">
+                <div class="eduction-feild" id="e1">
+                    <div class="university-details flex-row" id="u1">
+                        <div class="university-name">Indian Institute Of Technology, Kanpur</div>
+                        <div class="timeline"> July 2019 - May 2023</div>
+                    </div>
+                    <div class="degree">Bechelor Of Technology</div>
+                    <div class="completion-details">
+                        <div class="dept" id="d1">Bachelor Of computer Science and Engineering</div>
+                        <div class="gpa">GPA : 6.5 / 10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectional-item">
+                <div class="eduction-feild" id="e2">
+                    <div class="university-details flex-row" id="u2">
+                        <div class="university-name">Jawahar Navodaya Vidayalaya, Bundi</div>
+                        <div class="timeline"> July 2019 - May 2023</div>
+                    </div>
+                    <div class="degree">Senior Secondary Education</div>
+                    <div class="completion-details">
+                        <div class="dept" id="d1">HSC Examination, Central Board of Secondary Education</div>
+                        <div class="gpa">Percentage : 87.8 </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <hr>
+        <section class="resume detail-box" id="resume">
+            <div class="heading">Resume</div>
+            <iframe src="resume.pdf" width="100%" height="850"> </iframe>
+        </section>
+        <hr>
+        <section class="experience detail-box" id="experience">
+            <div class=" heading">Experience</div>
+            <div class="sectional-item">
+                <div class="work-details flex-column">
+                    <div class="role-details flex-row">
+                        <div class="role">Firmware Development Engineer</div>
+                        <div class="timeline">May 2022 - July 2022</div>
+                    </div>
+                    <div class="organization medium-heading" id="organization">
+                        Micron Technology Limited
+                    </div>
+                </div>
+                <div class="work-description description" id="work-description">
+                    Worked with SSD-Firmware team and contributed to developing a tool to check violations in coding standard rules and to help developers in future by speeding up the process of checking coding standard rules.
+                    Wrote scripts in Python to check coding style violations in Firmware code source files written in C language.
+                    Worked on Developer Test Framework(RDTF), to add some functionality to optimize stubbing performance, which is important for independent testing of all three domains FE, FTL and BE.
+                    Learning : Used and learnt Vera tool, (C and C++ program analysis and verification tool) along with basics
+                    of SSD, Controller, Firmware ( Garbage Collection, folding, Wear Levelling).
+                </div>
+            </div>
+
+            <!-- <div class="sectional-item">
+                <div class="work-details flex-column">
+                    <div class="role-details flex-row">
+                        <div class="role">Firmware Development Engineer</div>
+                        <div class="timeline">May 2022 - July 2022</div>
+                    </div>
+                    <div class="organization medium-heading" id="organization">
+                        Micron Technology Limited
+                    </div>
+                </div>
+                <div class="work-description description" id="work-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam ut aut minus, nam ipsa eos debitis adipisci recusandae laudantium. Consectetur harum architecto optio dolorum, dolore fugiat, ad pariatur molestiae nobis enim totam saepe accusamus vero est amet! Voluptas aliquam laboriosam quos non perspiciatis culpa exercitationem?
+                </div>
+            </div> -->
+            
+        </section>
+        <hr>
+        <section class="interests detail-box" id="interests">
+            <div class="heading">Interests</div>
+            <div class="description">
+                Although I like to play games in my free time either online or onground, onground my foavourite game is badminton and on mobile my favourite game is BGMI or PUBG.
+                Along with these two games I also like to play football and do some simple sketching.
+            </div>
+
+        </section>
+        <hr>
+        <section class="contacts detail-box" id="contacts">
+            <div class="heading " >Contact</div>
+            <div class=" sectional-item">
+                <div class="description">
+                    <div class="address contact-feild">Address: ....samarpan dwar, sector-5, Rajendra Nagar, Ghaziabad UP(201005)</div>
+                    <div class="email contact-feild">Email: <a href="mailto:amanraw4444@gmail.com">amanraw4444@gmail.com</a></div>
+                    <div class="contact  contact-feild">Contact: +91 94 8221 8858</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
