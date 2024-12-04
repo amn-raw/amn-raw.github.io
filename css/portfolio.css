@@ -272,6 +272,25 @@ hr{
     padding: 1rem 0;
 }
 
+/* Container for icons */
+.footer {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 20px; /* Adds space between icons */
+    padding: 20px 0;
+    background-color: black;
+}
+
+/* Style for icons */
+.icon {
+    color: #efd59a; /* Set default color */
+    text-decoration: none; /* Remove underline */
+}
+
+.icon:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
 
 
 @media (max-width:1200px) {
