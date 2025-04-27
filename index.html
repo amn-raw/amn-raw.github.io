@@ -6,164 +6,338 @@
     <link rel="shortcut icon" href="./assets/images/portfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/portfolio.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>Portfolio - Aman Raw</title>
+    <title>Portfolio - Aman Raw | AI/ML Innovator</title>
 </head>
 <body>
     <div class="frame" id="frame">
         <!-- Navigation Bar -->
         <nav class="nav-bar" id="nav-bar">
-            <img src="./assets/images/Aman.png" alt="Aman Raw" class="image" id="image">
-            <div class="item" id="a"><a href="#about" class="item" id="about-box" onclick="highLight('about-box')">About</a></div>
-            <div class="item" id="b"><a href="#education" class="item" id="education-box" onclick="highLight('education-box')">Education</a></div>
-            <div class="item" id="c"><a href="#resume" class="item" id="resume-box" onclick="highLight('resume-box')">Resume</a></div>
-            <div class="item" id="d"><a href="#experience" class="item" id="experience-box" onclick="highLight('experience-box')">Experience</a></div>
-            <div class="item" id="e"><a href="#interests" class="item" id="interests-box" onclick="highLight('interests-box')">Interests</a></div>
-            <div class="item" id="f"><a href="#contacts" class="item" id="contacts-box" onclick="highLight('contacts-box')">Contacts</a></div>
-            <button class="collapse-btn" id="link-collapse-btn" onclick="showLinks()">
-                <div class="rod" style="height:5px; width:37px; margin:6px; border-radius:2px; background:black;"></div>
-                <div class="rod" style="height:5px; width:37px; margin:6px; border-radius:2px; background:black;"></div>
-                <div class="rod" style="height:5px; width:37px; margin:6px; border-radius:2px; background:black;"></div>
+            <div class="logo-container">
+                <img src="./assets/images/Aman.png" alt="Aman Raw" class="image" id="image">
+            </div>
+            <div class="nav-items">
+                <div class="item"><a href="#about" onclick="highLight('about-box')">About</a></div>
+                <div class="item"><a href="#education" onclick="highLight('education-box')">Education</a></div>
+                <div class="item"><a href="#experience" onclick="highLight('experience-box')">Experience</a></div>
+                <div class="item"><a href="#projects" onclick="highLight('projects-box')">Projects</a></div>
+                <div class="item"><a href="#skills" onclick="highLight('skills-box')">Skills</a></div>
+                <div class="item"><a href="#resources" onclick="highLight('resources-box')">Resources</a></div>
+            </div>
+            <button class="collapse-btn" id="link-collapse-btn" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
             </button>
         </nav>
-        <hr>
+
+        <!-- AI Background Animation -->
+        <div class="ai-background" id="ai-background"></div>
 
         <!-- About Section -->
         <section class="about-box detail-box" id="about">
-            <h1 class="name heading" id="name">Aman <span class="salmon">Raw</span></h1>
-            <!-- Dark Mode Toggle Button -->
-
-            <p class="para description sectional-item about-para" id="about-para">
-                I am a Graduate Engineer Trainee at Jio Platforms Limited, working as a Software Developer. I am passionate about learning and exploring new algorithms, solving real-world problems, and building software solutions. 
-                My journey spans from a government primary school to Jawahar Navodaya Vidyalaya, Dakshana, Super-100, and finally IIT Kanpur. I aim to continuously grow and contribute to innovative technologies.
-            </p>
-            <p class="para description sectional-item about-para">
-                Currently, I specialize in AI/ML development and backend engineering. I have developed cutting-edge tools and platforms in generative AI and video processing, including building AI systems for speech generation, lip-sync video creation, and language identification.
+            <h1 class="name heading">Aman <span class="salmon">Raw</span></h1>
+            <p class="tagline">AI/ML Developer | Backend Engineer | Innovator</p>
+            <p class="para description sectional-item">
+                I’m an AI/ML Developer with over 2 years at Jio Platforms Limited, specializing in generative AI, video processing, and backend systems. My journey blends creativity and technology to deliver impactful solutions.
             </p>
         </section>
-        <hr>
 
         <!-- Education Section -->
-        <section class="education-box detail-box" id="education">
-            <h2 class="education heading" id="education-heading">Education</h2>
-            <div class="sectional-item">
-                <div class="eduction-feild" id="e1">
-                    <div class="university-details flex-row" id="u1">
-                        <div class="university-name">Indian Institute of Technology, Kanpur</div>
-                        <div class="timeline">July 2019 - May 2023</div>
-                    </div>
-                    <div class="degree">Bachelor of Technology</div>
-                    <div class="completion-details">
-                        <div class="dept" id="d1">Computer Science and Engineering</div>
+        <section class="education detail-box" id="education">
+            <div class="heading-wrapper">
+                <h2 class="heading">Education</h2>
+                <div class="edu-logos">
+                    <a href="https://www.iitk.ac.in/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/logo/iitk.png" alt="IIT Kanpur Logo" class="edu-logo">
+                    </a>
+                    <a href="https://navodaya.gov.in/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/logo/NVS.png" alt="JNV Logo" class="edu-logo">
+                    </a>
+                    <a href="https://www.dakshana.org/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/logo/dakshana.png" alt="Dakshana Logo" class="edu-logo">
+                    </a>
+                </div>                
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('edu1')"></div>
+                    <div class="content">
+                        <h3>Indian Institute of Technology, Kanpur</h3>
+                        <p class="timeline">Jul 2019 - May 2023</p>
+                        <div class="details" id="edu1">
+                            <p class="description">
+                                - Bachelor of Technology in Computer Science and Engineering.<br>
+                                - Focused on Data Structures, Algorithms, and Machine Learning.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="sectional-item">
-                <div class="eduction-feild" id="e2">
-                    <div class="university-details flex-row" id="u2">
-                        <div class="university-name">Jawahar Navodaya Vidyalaya, Bundi</div>
-                        <div class="timeline">July 2017 - May 2019</div>
-                    </div>
-                    <div class="degree">Senior Secondary Education</div>
-                    <div class="completion-details">
-                        <div class="dept" id="d1">HSC Examination, CBSE</div>
-                        <div class="gpa">Percentage: 87.8%</div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('edu2')"></div>
+                    <div class="content">
+                        <h3>Jawahar Navodaya Vidyalaya, Bundi</h3>
+                        <p class="timeline">Jul 2017 - May 2019</p>
+                        <div class="details" id="edu2">
+                            <p class="description">
+                                - Senior Secondary Education (HSC, CBSE).<br>
+                                - Achieved 87.8% with a focus on science and mathematics.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <hr>
-
-        <!-- Resume Section -->
-        <section class="resume detail-box" id="resume">
-            <h2 class="heading">Resume</h2>
-            <iframe src="resume.pdf" width="100%" height="850" title="Resume of Aman Raw"></iframe>
-        </section>
-        <hr>
 
         <!-- Experience Section -->
         <section class="experience detail-box" id="experience">
             <h2 class="heading">Experience</h2>
-            <div class="sectional-item">
-                <div class="work-details flex-column">
-                    <div class="role-details flex-row">
-                        <div class="role">AI/ML Developer | Backend Developer</div>
-                        <div class="timeline">Aug 2023 - Present</div>
-                    </div>
-                    <div class="organization medium-heading" id="organization">
-                        Jio Platforms Limited
-                    </div>
-                </div>
-                <p class="work-description description" id="work-description">
-                    • Developed an automated PowerPoint generator using LLaMA 3.1 and ‘python-pptx‘, powered by GenAI for content creation.<br>
-                    • Incorporated RAG for context-aware slides and custom LaTeX compilers for advanced formatting.<br>
-                    • Developed a comprehensive end-to-end lip-sync and expression-based Speaker 25fps video generation platform.<br>
-                    • Engineered two cutting-edge architectures for lip-sync and expression enhancement, driving a 30% increase in video quality and accuracy.<br>
-                    • Applied a GAN-based network for lip mask generation, integrating a speaker identity encoder based on 2D CNNs.<br>
-                    • Built a multi-language speech generation system with voice cloning for 13 Indian languages.<br>
-                    • Contributed to Jiomeet backend, implementing REST APIs using Node.js.<br>
-                    • Optimized language detection in video transcription using pre-trained transformer models.
-                </p>
-            </div>
-            <div class="sectional-item">
-                <div class="work-details flex-column">
-                    <div class="role-details flex-row">
-                        <div class="role">Firmware Engineer Intern</div>
-                        <div class="timeline">May 2022 - Jul 2022</div>
-                    </div>
-                    <div class="organization medium-heading" id="organization">
-                        Micron Technology Limited
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('exp1')"></div>
+                    <div class="content">
+                        <h3>AI/ML Developer | JioCloudPC</h3>
+                        <p class="timeline">Apr 2024 - Present</p>
+                        <div class="details" id="exp1">
+                            <p class="description">
+                                - Created MCP (Model Context Protocol) servers for internal tools supporting agentic workflows.<br>
+                                - Developed a very lightweight intent-based search and execution system for JioCloudPC using optimized algorithms.<br>
+                                - Leveraged FastAPI and PyTorch for scalable performance.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <p class="work-description description" id="work-description">
-                    • Revamped Python tool for code standards verification, reducing manual code review by 85%.<br>
-                    • Refined RDTF testing framework, improving stubbing for domain testing.<br>
-                    • Implemented 4 coding checks and contributed to code reviews.
-                </p>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('exp2')"></div>
+                    <div class="content">
+                        <h3>AI/ML Developer | Jiomeet+</h3>
+                        <p class="timeline">Jan 2024 - Mar 2024</p>
+                        <div class="details" id="exp2">
+                            <p class="description">
+                                - Built a system to extract highlights from meeting recordings using transformer models.<br>
+                                - Implemented context-aware sectioning of meetings for better usability in Jiomeet+.<br>
+                                - Improved transcription accuracy with pre-trained VoxLingua107 models.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('exp3')"></div>
+                    <div class="content">
+                        <h3>AI/ML Developer | JioCRM</h3>
+                        <p class="timeline">Nov 2023 - Dec 2023</p>
+                        <div class="details" id="exp3">
+                            <p class="description">
+                                - Designed and implemented an automated ticket assignment system for JioCRM.<br>
+                                - Optimized workflows using intent classification and rule-based logic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('exp4')"></div>
+                    <div class="content">
+                        <h3>AI/ML Developer | LipSync & Speech Generation</h3>
+                        <p class="timeline">Oct 2023 - Feb 2024</p>
+                        <div class="details" id="exp4">
+                            <p class="description">
+                                - Engineered a comprehensive 25fps lip-sync video generation platform with two novel architectures.<br>
+                                - Achieved a 30% increase in video quality using GAN-based lip mask generation and 2D CNN speaker identity encoders.<br>
+                                - Developed a multi-language speech generation system with voice cloning for 13 Indian languages using Generative AI and Stable Diffusion.<br>
+                                - Combined reference speaker embeddings to replicate style and tone accurately.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('exp5')"></div>
+                    <div class="content">
+                        <h3>Backend Developer | Jiomeet</h3>
+                        <p class="timeline">Aug 2023 - Sep 2023</p>
+                        <div class="details" id="exp5">
+                            <p class="description">
+                                - Contributed to Jiomeet backend by implementing REST APIs using Node.js.<br>
+                                - Enhanced scalability and performance for video conferencing features.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('exp6')"></div>
+                    <div class="content">
+                        <h3>Firmware Engineer Intern | Micron</h3>
+                        <p class="timeline">May 2022 - Jul 2022</p>
+                        <div class="details" id="exp6">
+                            <p class="description">
+                                - Revamped a Python tool for code standards verification, reducing manual review time by 85%.<br>
+                                - Refined the RDTF testing framework, improving stubbing for independent domain testing across 3 domains.<br>
+                                - Implemented 4 coding checks (e.g., banning recursive functions) and contributed to code reviews.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <hr>
 
         <!-- Projects Section -->
         <section class="projects detail-box" id="projects">
             <h2 class="heading">Projects</h2>
-            <div class="sectional-item">
-                <div class="project-details">
-                    <h3>Smart Aquarium IoT Project</h3>
-                    <p class="work-description description" id="project-description">
-                        • Designed a real-time monitoring system for pH and luminosity using Raspberry Pi and Arduino.<br>
-                        • Developed an automated system for water pH adjustment and brightness control.<br>
-                        • Created a mobile application for 24/7 remote monitoring of water quality metrics.
-                    </p>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj1')"></div>
+                    <div class="content">
+                        <h3>MCP Servers Development</h3>
+                        <p class="timeline">Apr 2024 - Present</p>
+                        <div class="details" id="proj1">
+                            <p class="description">
+                                - Built MCP (Model Context Protocol) servers for internal tools to support agentic workflows in JioCloudPC.<br>
+                                - Ensured high scalability and performance using FastAPI and PyTorch frameworks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj2')"></div>
+                    <div class="content">
+                        <h3>Intent-Based Search</h3>
+                        <p class="timeline">Apr 2024 - Present</p>
+                        <div class="details" id="proj2">
+                            <p class="description">
+                                - Developed a very lightweight intent-based search and execution system for JioCloudPC.<br>
+                                - Optimized for low latency and resource efficiency using custom algorithms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj3')"></div>
+                    <div class="content">
+                        <h3>Jiomeet+ Enhancements</h3>
+                        <p class="timeline">Jan 2024 - Mar 2024</p>
+                        <div class="details" id="proj3">
+                            <p class="description">
+                                - Created a system to extract highlights from meeting recordings using transformer-based models.<br>
+                                - Implemented context-aware sectioning for improved meeting navigation in Jiomeet+.<br>
+                                - Integrated language identification with VoxLingua107 for accurate transcription.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj4')"></div>
+                    <div class="content">
+                        <h3>Video LipSync Generation</h3>
+                        <p class="timeline">Oct 2023 - Feb 2024</p>
+                        <div class="details" id="proj4">
+                            <p class="description">
+                                - Developed an end-to-end 25fps lip-sync video generation platform with two cutting-edge architectures.<br>
+                                - Improved video quality by 30% using GAN-based lip mask generation and 2D CNN speaker identity encoders.<br>
+                                - Built with FastAPI and PyTorch for enhanced performance and scalability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj5')"></div>
+                    <div class="content">
+                        <h3>Speech Generation & Voice Cloning</h3>
+                        <p class="timeline">Oct 2023 - Jan 2024</p>
+                        <div class="details" id="proj5">
+                            <p class="description">
+                                - Engineered a multi-language speech generation system supporting 13 Indian languages.<br>
+                                - Implemented voice cloning using Generative AI and Stable Diffusion, with reference speaker embeddings for style and tone replication.<br>
+                                - Achieved high-fidelity audio output with minimal latency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj6')"></div>
+                    <div class="content">
+                        <h3>Smart Aquarium IoT</h3>
+                        <p class="timeline">Mar 2022 - Apr 2022</p>
+                        <div class="details" id="proj6">
+                            <p class="description">
+                                - Designed a real-time monitoring system for pH (6.8-7.8) and luminosity using Raspberry Pi and Arduino.<br>
+                                - Automated water pH adjustment and brightness control (10-20 lumen) with solenoid valves.<br>
+                                - Built a mobile app for 24/7 remote monitoring of water quality metrics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="node" onclick="toggleDetails('proj7')"></div>
+                    <div class="content">
+                        <h3>Django - DigiSchool IITK</h3>
+                        <p class="timeline">Feb 2022 - Mar 2022</p>
+                        <div class="details" id="proj7">
+                            <p class="description">
+                                - Crafted an educational platform for grades 6-12 with a 10-member team.<br>
+                                - Deployed v2.0 with discussion forums and integrated communication tools (announcements, chat).<br>
+                                - Enhanced student-teacher interaction and course material accessibility.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <hr>
 
-        <!-- Interests Section -->
-        <section class="interests detail-box" id="interests">
-            <h2 class="heading">Interests</h2>
-            <p class="description">
-                In my free time, I enjoy playing badminton, football, and mobile games like BGMI. I also like sketching and exploring creative hobbies.
-            </p>
-        </section>
-        <hr>
-
-        <!-- Contacts Section -->
-        <section class="contacts detail-box" id="contacts">
-            <h2 class="heading">Contact</h2>
-            <div class="sectional-item">
-                <p class="address contact-feild">Address: Samarpan Dwar, Sector-5, Rajendra Nagar, Ghaziabad, UP (201005)</p>
-                <p class="email contact-feild">Email: <a href="mailto:amanraw4444@gmail.com">amanraw4444@gmail.com</a></p>
-                <p class="phone contact-feild">Phone: +91-9005827446</p>
+        <!-- Skills Section -->
+        <section class="skills detail-box" id="skills">
+            <h2 class="heading">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">C/C++</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Java</div>
+                <div class="skill-card">PyTorch</div>
+                <div class="skill-card">TensorFlow</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Docker</div>
+                <div class="skill-card">Kubernetes</div>
+                <div class="skill-card">GenAI</div>
+                <div class="skill-card">RAG</div>
+                <div class="skill-card">LLM</div>
             </div>
         </section>
-        <footer>
-            <div class="footer">
-                <a href="https://github.com/amn-raw" class="icon"><i class="fab fa-github fa-3x"></i></a>
-                <a href="https://www.linkedin.com/in/aman-raw-7040221b4" class="icon"><i class="fab fa-linkedin fa-3x"></i></a>
-                <!-- <a href="https://www.instagram.com/amanraw.4444/" class="icon"><i class="fab fa-codeforces fa-3x"></i></a> -->
+
+        <!-- Resources Section -->
+        <!-- <section class="resources detail-box" id="resources">
+            <h2 class="heading">Resources & Insights</h2>
+            <p class="description intro-text">Dive into my technical sessions and research notes:</p>
+            <button class="resource-btn" onclick="openModal()">Deepseek-R1 Session Notes</button>
+            <div class="modal" id="resource-modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">×</span>
+                    <h3>Deepseek-R1 Session</h3>
+                    <p>Finetuning Deepseek-R1 for medical use cases with interactive chat.</p>
+                    <a href="./assets/resources/deepseek-r1-notes.pdf" download>Download PDF</a>
+                </div>
+            </div>
+        </section> -->
+        <!-- Resources Section -->
+<section class="resources detail-box" id="resources">
+    <h2 class="heading">Resources & Insights</h2>
+    <p class="description intro-text">Dive into my technical sessions and research notes:</p>
+    
+    <!-- Dynamic Button for Deepseek-R1 -->
+    <button class="resource-btn" onclick="window.location.href='https://drive.google.com/drive/folders/10-aNtBOl7YnGH8HI1Fmcbp9iuY_0n6pK?usp=sharing'">
+      Explore DeepSeek-R1 Folder
+    </button>
+    
+    <!-- Future resource buttons can go here -->
+    <div id="dynamic-resources"></div>
+  </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- <div class="contact-info">
+                <p>Phone: +91-900....446</p>
+            </div> -->
+            <div class="social-links">
+                <a href="mailto:amanraw4444@gmail.com" class="icon"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://github.com/amn-raw" class="icon"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/aman-raw-7040221b4" class="icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://leetcode.com/u/aman4444/" class="icon"><i class="fas fa-code fa-2x"></i></a>
             </div>
         </footer>
     </div>
+    <script src="./scripts/portfolio.js"></script>
 </body>
 </html>
